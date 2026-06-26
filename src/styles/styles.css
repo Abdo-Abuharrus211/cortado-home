@@ -45,7 +45,7 @@
 :root {
     /* ff and ff2 fonts */
     --ff1: "Noto Sans", sans-serif;
-    --ff2: "Archivo", sans-serif;
+    --ff2: "Lora", serif;
     /* font sizes */
     --fsize1: 1rem;
     --fsize2: 1.125rem;
@@ -62,7 +62,7 @@
     --spacing7: 160px;
     --spacing8: 320px;
     /* fonts in typography file */
-    --h1: 700 3rem/1.2em var(--ff2);
+    --h1: 500 3rem/1.2em var(--ff1);
     --h2: 600 2rem/1.2em var(--ff2);
     --p: 1rem/1.5em var(--ff1);
 
@@ -110,10 +110,15 @@ small {
 }
 
 a {
-    text-decoration: none;
+    text-decoration: underline;   
     color: var(--accent);
 }
 
 a:hover {
     color: var(--secondary);
+}
+
+.styled-font{
+    font-family: var(--ff2);
+    font-style: italic
 }
