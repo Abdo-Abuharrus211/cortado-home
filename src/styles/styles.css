@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Theme preference colors */
+@media (prefers-color-scheme: light) {
+    :root {
+        --text: hsl(255, 33%, 7%);
+        --background: hsl(253, 36%, 95%);
+        --primary: hsl(28, 41%, 71%);
+        --secondary: hsl(353, 29%, 54%);
+        --accent: hsl(28, 18%, 45%);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text: hsl(255, 33%, 93%);
+        --background: hsl(253, 36%, 5%);
+        --primary: hsl(28, 41%, 29%);
+        --secondary: hsl(353, 29%, 46%);
+        --accent: hsl(28, 18%, 55%);
+    }
+}
+
+/* Themes set in root */
+:root[data-theme="light"] {
+    --text: hsl(255, 33%, 7%);
+    --background: hsl(253, 36%, 95%);
+    --primary: hsl(28, 41%, 71%);
+    --secondary: hsl(353, 29%, 54%);
+    --accent: hsl(28, 18%, 45%);
+}
+
+:root[data-theme="dark"] {
+    --text: hsl(255, 33%, 93%);
+    --background: hsl(253, 36%, 5%);
+    --primary: hsl(28, 41%, 29%);
+    --secondary: hsl(353, 29%, 46%);
+    --accent: hsl(28, 18%, 55%);
+}
+
+:root {
+    /* ff and ff2 fonts */
+    --ff1: "Noto Sans", sans-serif;
+    --ff2: "Archivo", sans-serif;
+    /* font sizes */
+    --fsize1: 1rem;
+    --fsize2: 1.125rem;
+    --fsize3: 1.25rem;
+    --fsize4: 1.5rem;
+    --fsize5: 0.875rem;
+    /* Spacings */
+    --spacing1: 4px;
+    --spacing2: 8px;
+    --spacing3: 16px;
+    --spacing4: 20px;
+    --spacing5: 40px;
+    --spacing6: 80px;
+    --spacing7: 160px;
+    --spacing8: 320px;
+    /* fonts in typography file */
+    --h1: 700 3rem/1.2em var(--ff2);
+    --h2: 600 2rem/1.2em var(--ff2);
+    --p: 1rem/1.5em var(--ff1);
+
+    --successGreen: hsl(120, 48%, 67%);
+    --errorRed: hsl(6, 59%, 55%);
+    --focus: 2px solid lightblue;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    /* use your defined for globals for bg, font, and color */
+    min-height: 100vh;
+    text-wrap: balance;
+    font: var(--p);
+    color: var(--text);
+    background: var(--background);
+}
+
+
+h1 {
+    font: var(--h1);
+    color: var(--primary);
+    margin: var(--spacing1);
+}
+
+h2 {
+    font: var(--h2);
+    color: var(--primary);
+    margin: var(--spacing2);
+}
+
+h3 {
+    margin: var(--spacing2);
+}
+
+p {
+    margin: var(--spacing2);
+}
+
+small {
+    color: var(--subtext);
+}
+
+a {
+    text-decoration: none;
+    color: var(--accent);
+}
+
+a:hover {
+    color: var(--secondary);
+}
