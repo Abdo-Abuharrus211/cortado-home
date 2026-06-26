@@ -1,5 +1,6 @@
 ---
-import '../styles/styles.css';
+import "../styles/styles.css";
+import "../styles/global.css";
 const year = new Date().getFullYear();
 ---
 
@@ -9,22 +10,42 @@ const year = new Date().getFullYear();
     <!-- TODO: change this -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="/favicon.ico" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
 
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>Cortado</title>
   </head>
-  <body>
-    <h1>Welcome to Cortado, home to my VPS.</h1>
-    <main>
-      <div>
-		<!-- This is where you add links to services on the server or elsewhere -->
-        <a href="https://aabuharrus.dev">Website</a>
-        <a href="https://garden.aabuharrus.dev">Blog</a>
-      </div>
-    </main>
+  <body
+    class="min-h-screen flex flex-col items-center justify-center px-6 text-center"
+  >
+    <section
+      class="mx-auto flex w-full max-w-2xl flex-col items-center justify-center gap-6"
+    >
+      <h1>
+        Welcome to <span class="styled-font">Cortado</span>, home to my VPS.
+      </h1>
+      <main>
+        <div class="flex flex-wrap flex-col items-center justify-center gap-4">
+          <!-- This is where you add links to services on the server or elsewhere -->
+          <div>
+            <p>Intersting Things Coming Soon...</p>
+          </div>
+          <div class="flex flex-wrap gap-4 items-center">
+            <a href="https://aabuharrus.dev">Website</a>
+            <a href="https://garden.aabuharrus.dev">Blog</a>
+          </div>
+        </div>
+      </main>
+    </section>
+    <footer class="mt-8">
+      <p>Copyright Abdulqadir Abuharrus © {year}</p>
+    </footer>
   </body>
-  <footer>
-    <p>Copyright Abdulqadir Abuharrus © {year}</p>
-  </footer>
 </html>
