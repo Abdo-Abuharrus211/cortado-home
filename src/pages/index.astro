@@ -1,17 +1,30 @@
 ---
-
+import '../styles/styles.css';
+const year = new Date().getFullYear();
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <!-- TODO: change this -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Cortado</title>
+  </head>
+  <body>
+    <h1>Welcome to Cortado, home to my VPS.</h1>
+    <main>
+      <div>
+		<!-- This is where you add links to services on the server or elsewhere -->
+        <a href="https://aabuharrus.dev">Website</a>
+        <a href="https://garden.aabuharrus.dev">Blog</a>
+      </div>
+    </main>
+  </body>
+  <footer>
+    <p>Copyright Abdulqadir Abuharrus © {year}</p>
+  </footer>
 </html>
